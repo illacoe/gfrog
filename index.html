@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <title>Grupo Frog</title>
+    <script defer src="main.js"></script>
 </head>
-<body>
+<body class="body">
     <div class="container">
+        <!-- Header With Nav  -->
         <header class="page__header">
             <figure>
                 <img src="./images/logo.png" alt="">
@@ -16,19 +18,56 @@
             <nav id="nav-desktop">
                 <ul>
                   <div class="left">
-                    <li class="li-nav"><a href="#">Minería</a></li>
-                    <li class="li-nav"><a href="#">Agropecuaria</a></li>
-                    <li class="li-nav"><a href="#">Ecomerce</a></li>
-                    <li class="li-nav"><a href="#">Soporte</a></li>
+                    <li class="li-nav">
+                        <div class="dropdown">
+                            <button class="dropbtn">Minería</button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                          </div>
+                    </li>
+                    <li class="li-nav">
+                        <div class="dropdown">
+                            <button class="dropbtn">Agropecuaria</button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li-nav">
+                        <div class="dropdown">
+                            <button class="dropbtn">Ecomerce</button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li-nav">
+                        <div class="dropdown">
+                            <button class="dropbtn">Soporte</button>
+                            <div class="dropdown-content">
+                              <a href="#">Link 1</a>
+                              <a href="#">Link 2</a>
+                              <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </li>
                   </div>
                   <div class="right">
                     <li class="li-nav"><a href="#">Todo Frog</a></li>
                     <li class="li-nav"><a href="#">Contacto</a></li>
-                    <li class="li-nav"><a href="#">Iniciar Sesión</a></li>
+                    <li class="li-nav"><a id="myBtn" href="#">Iniciar Sesión</a></li>
                   </div>
                 </ul>
             </nav>
         </header>
+        <!-- Section  -->
         <section class="page__section">
             <div class="page__section_slider">
                 <img src="./images/00.jpg" alt="">
@@ -41,13 +80,13 @@
                     </div>
                     <div class="firstCard-content content-center">
                         <h3 class="title-h3 left-p">Frog Protección Industrial</h3>
-                        <p class="left-p">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
+                        <p class="left-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
                     </div>
                 </div>
-                <div class="page-firstCard flex-col space-top">
+                <div class="page-firstCard flex-col space-top invert-direction">
                     <div class="firstCard-content content-center">
                         <h3 class="title-h3 right-p">Frog Facility Service</h3>
-                        <p class="right-p">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
+                        <p class="right-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
                     </div>
                     <div class="firstCard-img">
                         <img class="content-responsive img-second-heigth" src="./images/03_FFS.jpg" alt="">
@@ -59,15 +98,15 @@
                     </div>
                     <div class="firstCard-content content-center">
                         <h3 class="title-h3 left-p">Frog V.P.I</h3>
-                        <p class="left-p">1Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
+                        <p class="left-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
                     </div>
                 </div>
             </div>
-            <div class="page__section_secondService space-top">
-                <div class="page-secondCard flex-col">
+            <div class="page__section_secondService space-top ">
+                <div class="page-secondCard flex-col invert-direction">
                     <div class="secondCard-content content-center">
                         <h3 class="title-h3 right-p">Frog Mantenimiento</h3>
-                        <p class="right-p">3Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
+                        <p class="right-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
                     </div>
                     <div class="secondCard-img">
                         <img class="content-responsive img-second-heigth" src="./images/04_FAO.jpg" alt="">
@@ -95,7 +134,7 @@
                     </div>
                     <div class="secondCard-content content-center">
                         <h3 class="title-h3 left-p">Frog Consultoría</h3>
-                        <p class="left-p">2Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
+                        <p class="left-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illum illo alias. Labore, sit quo voluptatem mollitia, numquam tempore molestiae hic dicta placeat ratione consequuntur fugiat repellendus blanditiis porro velit!</p>
                     </div>
                 </div>
             </div>
@@ -126,6 +165,7 @@
             </div>
         </section>
     </div>
+    <!-- Footer -->
     <footer class="page__footer">
        <div class="page__footer_service">
         <div class="footer-left flex-col">
@@ -216,9 +256,82 @@
                 </div>
                 </ul>
               </nav>
-             
             </div>
           </div>
     </footer>
+    <!-- Tab Menu Mobile  -->
+    <div class="tab-mobile-menu">
+        <div class="tab">
+            <button class="footer-link accordion">Minería</button>
+            <div class="panel">
+                <div class="sub-tab"><a class="footer-link" href="#">Frog Tecnología</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Frog Protección Industrial</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Frog Capacitación</a></div>
+            </div>  
+        </div>
+        <div class="tab">
+            <button class="footer-link accordion">Agropecuaria</button>
+            <div class="panel">
+                <div class="sub-tab"><a class="footer-link" href="#">Frog Aras</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Frog Agropecuaria</a></div>
+            </div>
+        </div>
+        <div class="tab">
+            <button class="footer-link accordion">Ecomerce</button>
+            <div class="panel">
+                <div class="sub-tab"><a class="footer-link" href="#">Senhora Rodriguez</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Recursos SCAPE</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Frog inmobiliaria</a></div>
+            </div>  
+        </div>
+        <div class="tab">
+            <button class="footer-link accordion">Todo Frog</button>
+            <div class="panel">
+                <div class="sub-tab"><a class="footer-link" href="#">Acerca de Grupo Frog</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Nuestros Proyectos</a></div>
+                <div class="sub-tab"><a class="footer-link" href="#">Equipo de Soporte</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab Login Mobile  -->
+    <div class="tab-mobile-sesion">
+        <div class="sesion-tab">
+            <div class="page__header">
+                <figure>
+                    <img src="./images/logo.png" alt="">
+                </figure>
+            </div>
+            <div class="tab-form">
+                <input type="text" placeholder="User">
+                <input type="password" placeholder="Password">
+                <button class="space-top" type="input">Iniciar Sesion</button>
+            </div>
+        </div>
+    </div>
+    <!-- The bottom bar menu mobile  -->
+    <div class="bar-mobile-menu">
+        <div class="bar-mobile-container">
+            <!-- <div class="bar-tab">HOME</div> -->
+            <div class="bar-tab toggle-button" id="sesion">
+                <span class="bar-subtab-on">SES</span>
+                <span class="bar-subtab-off">CLOSE</span>
+            </div>
+            <div class="bar-tab toggle-button" id="folder">
+                <span class="bar-subtab-on">FOLDER</span>
+                <span class="bar-subtab-off">CLOSE</span>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+            <div class="tab-form">
+                <input class="space-top" type="text" placeholder="User">
+                <input type="password" placeholder="Password">
+                <button class="space-top" type="input">Iniciar Sesion</button>
+            </div>
+    </div>
+</div>
 </body>
 </html>

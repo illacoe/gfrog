@@ -2,6 +2,9 @@ body {
     margin: 0;
     font-family: Raleway, sans-serif;
 }
+.body.is-active{
+    overflow-y: hidden;
+  }
 .container {
     margin-left: 5%;
     margin-right: 5%;
@@ -114,7 +117,170 @@ body {
     padding: 4px 24px 0 0;
     font-size: 11px;
     list-style: none;
+    width: max-content;
 }
+.tab-mobile-menu, .tab-mobile-sesion{
+    position: fixed;
+    background: #f2f2f2;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    overflow:auto;
+}
+.tab-form{
+    display: flex;
+    padding: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tab-form input{
+    margin: 5%;
+}
+.tab-form button{
+    border: 1px solid black;
+    border-radius: 15px;
+    background: #eeee;
+    padding: 6px;
+}
+.tab-mobile-menu.is-active{
+    display: block;
+}
+.tab-mobile-sesion.is-active{
+    display: block;
+}
+.tab{
+    margin: 5%;
+    border-bottom: 1px solid #b6afaf8e ;
+}
+.tab:last-child{
+    margin-bottom: 100px;
+}
+.sub-tab{
+    padding: 5%;
+    border-top: 1px solid #b6afaf8e ;
+}
+.bar-mobile-menu{
+    background: #616161;
+    height: 50px;
+    bottom: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 4;
+    display: none;
+    justify-content:space-between ;
+    align-items: center;
+}
+.bar-mobile-container{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+    height: 50px;
+}
+.bar-tab{
+    margin-left:auto;
+    margin-right: auto;
+    color: white;
+    width: 100%;
+}
+.bar-subtab-on{
+    display: block;
+    margin: 0;
+}
+.bar-subtab-on.is-active{
+    display:none;
+}
+.bar-subtab-off{
+    display: none;
+    margin: 0;
+}
+.bar-subtab-off.is-active{
+    display: block;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* menu mobile */
+.accordion{
+    font-size: 1em;
+    padding: 0;
+    margin: 10px 0;
+}
+.panel{
+      display: none;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 14px;
+    border: none;
+} 
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ebebeb;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #ebebeb;}
 /* REPETIDOS*/
 .title-h2{
     text-align: center;
@@ -229,7 +395,6 @@ body {
         margin: 0;
     }
 }
-  
 /* tablet */
 @media screen and (max-width:768px) {
     .page__footer_service {
@@ -239,8 +404,13 @@ body {
         display: block;
     }
     .page__footer_languaje {
-        
         display: block;
+    }
+    .page__header{
+        justify-content: center;
+    }
+    .page__header img{
+        padding: 5px;
     }
     .first-lan-content-ul{
         padding: 0;
@@ -257,8 +427,10 @@ body {
     #nav-desktop{
         display: none;
     }
+    .bar-mobile-menu{
+        display: block;
+    }
 }
-  
 /* mobile */
 @media screen and (max-width:425px) {
      .flex-col{
@@ -280,7 +452,22 @@ body {
         height: fit-content;
         object-fit: cover;
         object-position: 60%;
+    }
+    .img-third-heigth{
+        object-position: 70%;
+    }
+    .firstCard-img, .firstCard-content, .secondCard-img, .secondCard-content{
+        width: 100%;
+    }
+    .left-p, .right-p{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .logo-rss{
+        display: flex;
+    }
+    .invert-direction{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
-}
-
-  

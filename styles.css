@@ -242,6 +242,12 @@ body {
     font-size: 1em;
     padding: 0;
     margin: 10px 0;
+    width: 100%;
+    padding: 1%;
+    text-align: left;
+    border: 0;
+    background-color: transparent;
+    font-weight: 600;
 }
 .panel{
       display: none;
@@ -344,8 +350,7 @@ body {
 .footer-link {
     text-decoration: none;
     color: #616161;
-}
-/* 225716275 */
+} 
 .back-tecnology-first{
     background-color: #1c1c1c;
 }
@@ -397,6 +402,10 @@ body {
 }
 /* tablet */
 @media screen and (max-width:768px) {
+
+    .page__footer{
+        padding-bottom: 40px;
+    }
     .page__footer_service {
         display: block;
     }
@@ -404,7 +413,7 @@ body {
         display: block;
     }
     .page__footer_languaje {
-        display: block;
+        display: none;
     }
     .page__header{
         justify-content: center;
@@ -412,6 +421,7 @@ body {
     .page__header img{
         padding: 5px;
     }
+    
     .first-lan-content-ul{
         padding: 0;
     }

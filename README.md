@@ -1,3 +1,3 @@
 # Web template
 
-- [DEMO LIVE](https://illacoe.github.io/gfrog-theme/)
+- [DEMO LIVE](https://illacoe.github.io/gfrog/)
